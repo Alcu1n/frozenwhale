@@ -17,32 +17,6 @@ export default function App() {
       </group>
       <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 2} autoRotate autoRotateSpeed={0.3} makeDefault />
       <Environment files="./dancing_hall_1k.hdr" background backgroundBlurriness={1} />
-      {/* 添加3D文字 */}
-      <Center position={[0, 5, 0]}>
-        <Text3D
-          font="/helvetiker_regular.typeface.json" // 指定字体文件
-          size={2} // 字体大小
-          height={0.2} // 厚度
-          curveSegments={12} // 细分曲线段数
-          bevelEnabled={true} // 启用倒角
-          bevelThickness={0.1} // 倒角厚度
-          bevelSize={0.02} // 倒角大小
-        >
-          Reject Ocean Show
-          <meshPhysicalMaterial
-            attach="material"
-            color="#707c87"
-            roughness={0.1}
-            transmission={0.5}
-            thickness={1.5}
-            ior={3}
-            specularIntensity={1}
-            envMapIntensity={0.5}
-            clearcoat={1}
-            clearcoatRoughness={0.5}
-          />
-        </Text3D>
-      </Center>
     </Canvas>
   )
 }
